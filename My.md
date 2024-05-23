@@ -443,4 +443,7 @@ export { BASE_URL }
 维护时分两种情况：
 + playSongList中有该歌曲，直接从其中获取歌曲信息，并修改playSongIndex
 + 无当前歌曲，发送请求获取歌曲信息，push到播放列表，修改playSongIndex
+
+  ![image](https://github.com/LiZH147/music-app/assets/90740609/8e7f7409-4bce-443d-afb9-230a53945cd3)
+
  
