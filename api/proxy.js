@@ -1,6 +1,6 @@
 // api/proxy.js
 // 该服务为 vercel serve跨域处理
-const { createProxyMiddleware } = require('http-proxy-middleware')
+import { createProxyMiddleware } from "http-proxy-middleware";
 
 module.exports = (req, res) => {
     let target = ''
@@ -8,7 +8,8 @@ module.exports = (req, res) => {
     // 这里使用 backend 主要用于区分 vercel serverless 的 api 路径
     // target 替换为你跨域请求的服务器 如： http://baidu.com
     if (req.url.includes('/backend')) {
-        target = 'http://codercba.com:9002'
+        target = 'https://codercba.com:9002'
+        console.log(req)
     }
     // 创建代理对象并转发请求
     createProxyMiddleware({
